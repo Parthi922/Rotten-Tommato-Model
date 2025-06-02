@@ -1,5 +1,6 @@
 **Zoho Assignment_
  rotten_tomatoes_movies3.ipynb_**
+
  
 
 # 🎬 Rotten Tomatoes Movie Ratings Analysis
@@ -62,36 +63,12 @@ Built using **Python, pandas, seaborn, and matplotlib**.
 <img src="screenshots/rating_distribution.png" width="400"/>  
 <img src="screenshots/ratings_over_time.png" width="400"/>
 
----
+## 📦 Dataset
 
-## 🧪 Tech Stack
-
-| Tool          | Use                        |
-|---------------|-----------------------------|
-| `pandas`      | Data handling & exploration |
-| `matplotlib`  | Base plotting               |
-| `seaborn`     | Statistical visualizations  |
-| `Jupyter` / `Colab` | Notebook environment  |
-
----
-
-## 📝 Changelog
-
-### 🔧 [v1.0.1] – Column Reference Fix
-- **Issue**: Incorrect column `audience_score` used.
-- **Fix**: Replaced with correct column `audience_rating`.
-- ✅ All analysis and visualizations now run without errors.
-
----
-
-## 📁 File Structure
-
-```bash
-.
-├── Rotten-Tommato-Model.ipynb     # Main Colab notebook
-├── rotten_tommato_model.py        # Converted Python script
-├── rotten_tomatoes_movies.csv     # Input dataset (not included)
-├── README.md                      # Project overview
-└── screenshots/                   # Optional image outputs
+- **Source**: [Rotten Tomatoes Movies & Reviews (Kaggle)](https://www.kaggle.com/datasets/ayushggarg/rotten-tomatoes-movies-and-critic-reviews-dataset)
+- **Encoding**: `latin-1`
+- **File Name**: `rotten_tomatoes_movies.csv`
+- **Rows**: 17,712
+- **Columns**: 22
 
 
