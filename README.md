@@ -65,7 +65,7 @@ Built using **Python, pandas, seaborn, and matplotlib**.
 
 ## 📦 Dataset
 
-- **Source**: [Rotten Tomatoes Movies & Reviews (Kaggle)](https://www.kaggle.com/datasets/ayushggarg/rotten-tomatoes-movies-and-critic-reviews-dataset)
+- **Source**: [Rotten Tomatoes Movies & Reviews (Kaggle)](https://www.rottentomatoes.com/m/0814255)
 - **Encoding**: `latin-1`
 - **File Name**: `rotten_tomatoes_movies.csv`
 - **Rows**: 17,712
