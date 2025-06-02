@@ -2,34 +2,96 @@
  rotten_tomatoes_movies3.ipynb_**
  
 
-With the given dataset, build a model to predict 'audience_rating'. Demonstrate the working of the pipeline with a notebook, also validate the model for its accuracy. Using Machine Learning
+# 🎬 Rotten Tomatoes Movie Ratings Analysis
 
-Here’s a brief summary of the code in short points:
+This project explores and visualizes a dataset of movies from **Rotten Tomatoes** to identify patterns and insights related to:
+- 🎯 Audience and critic ratings
+- 🎭 Genres
+- 📅 Release trends
+- 🧮 Review counts
 
-1. **Load Data**: Import the dataset (`Rotten_Tomatoes_Movies3.xls`) and handle missing values by dropping rows with NaN values.
+Built using **Python, pandas, seaborn, and matplotlib**.
 
-2. **Preprocessing**:
-   - Convert DateTime columns to numeric.
-   - Apply Label Encoding to categorical features (e.g., movie genres).
+---
 
-3. **Train-Test Split**: Split the data into 80% training and 20% testing sets.
+## 📦 Dataset
 
-4. **Pipeline Creation**: 
-   - Use `StandardScaler` to scale features.
-   - Use `RandomForestRegressor` as the model for prediction.
+- **Source**: `rotten_tomatoes_movies.csv`
+- **Encoding**: `latin-1`
+- **Rows**: 17,712
+- **Columns**: 22
 
-5. **Hyperparameter Tuning**: 
-   - Define a grid of hyperparameters for Random Forest.
-   - Use `GridSearchCV` to find the best model configuration based on cross-validation.
+### 📊 Key Features
+- `tomatometer_rating`: Critic score (0–100)
+- `audience_rating`: Audience score (0–100)
+- `runtime`: Movie duration in minutes
+- `genres`: Comma-separated genre labels
+- `original_release_date`: Official release date
+- `tomatometer_count` / `audience_count`: Number of reviews
 
-6. **Model Evaluation**: 
-   - Evaluate the model’s performance on the test set using MAE, MSE, and R² score.
+---
 
-7. **Save Model**: Save the trained model (`audience_rating_model.pkl`) using `joblib`.
+## 🚀 Features & Analysis
 
-8. **Prediction on Entire Dataset**:
-   - Apply preprocessing to the entire dataset.
-   - Predict the `audience_rating` for all rows and add it as a new column.
+### 1. **Data Exploration**
+- Shape, types, missing values
+- Descriptive stats for numeric columns
+- Frequency counts for categorical columns
 
-9. **Model Validation**: Re-validate the model on the test set and display performance metrics (R², MAE, MSE).
+### 2. **Visualizations**
+- Histograms for:
+  - `tomatometer_rating`
+  - `audience_rating`
+  - `runtime`
+- Scatter plots:
+  - Rating correlations
+  - Review count vs. rating
+- Bar plot of genre frequency
+- Line plot of ratings over release years
+
+### 3. **Correlation Insights**
+- ✅ Positive correlation between critic and audience ratings (~0.65)
+- ⚠️ Weak correlation between number of reviews and rating
+- 🎬 Genre-wise movie distribution analysis
+- 📈 Year-wise average rating trends
+
+---
+
+## 📈 Sample Visuals
+
+<img src="screenshots/rating_distribution.png" width="400"/>  
+<img src="screenshots/ratings_over_time.png" width="400"/>
+
+---
+
+## 🧪 Tech Stack
+
+| Tool          | Use                        |
+|---------------|-----------------------------|
+| `pandas`      | Data handling & exploration |
+| `matplotlib`  | Base plotting               |
+| `seaborn`     | Statistical visualizations  |
+| `Jupyter` / `Colab` | Notebook environment  |
+
+---
+
+## 📝 Changelog
+
+### 🔧 [v1.0.1] – Column Reference Fix
+- **Issue**: Incorrect column `audience_score` used.
+- **Fix**: Replaced with correct column `audience_rating`.
+- ✅ All analysis and visualizations now run without errors.
+
+---
+
+## 📁 File Structure
+
+```bash
+.
+├── Rotten-Tommato-Model.ipynb     # Main Colab notebook
+├── rotten_tommato_model.py        # Converted Python script
+├── rotten_tomatoes_movies.csv     # Input dataset (not included)
+├── README.md                      # Project overview
+└── screenshots/                   # Optional image outputs
+
 
